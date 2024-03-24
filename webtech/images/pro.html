@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="2.css">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="top">
+  <div class="bar black card">
+    <a class="bar-item button padding-large hide-medium hide-large right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">... </a>
+    <a href="../concert_manage.php" class="bar-item button padding-large">BACK</a>
+  
+
+
+    <h1> Retr0Grade </h1>
+
+    <div class="gallery" id="image-gallery">
+     
+    </div>
+
+    <script>
+
+        const imageUrls = [
+            '1.jpg',
+            '2.jpg',
+            '3.jpg',
+            '6.jpg'
+            // Add more image URLs as needed
+        ];
+
+        const gallery = document.getElementById('image-gallery');
+
+        // Populate the gallery with images
+        imageUrls.forEach((imageUrl) => {
+            const img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = 'Gallery Image';
+            gallery.appendChild(img);
+        });
+    </script>
+
+</body>
+</html>
